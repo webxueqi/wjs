@@ -1,0 +1,700 @@
+/*
+*1.样式都通过ID去限定
+*2.尽可能多使用子代选择器
+*/
+
+/*
+*公共样式
+*/
+body {
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+
+/*自定义字体*/
+@font-face {
+    font-family: 'itcast';
+    src: url('../font/MiFie-Web-Font.eot') format('embedded-opentype'),
+    url('../font/MiFie-Web-Font.svg') format('svg'),
+    url('../font/MiFie-Web-Font.ttf') format('truetype'),
+    url('../font/MiFie-Web-Font.woff') format('woff')
+}
+
+[class^='icon-'],
+[class*=" icon-"] {
+    font-family: itcast;
+    font-style: normal;
+}
+
+.icon-mobillephone::before {
+    content: "\e908";
+    font-size: 13px;
+}
+
+.icon-telephone::before {
+    content: "\e909";
+    font-size: 13px;
+}
+
+.icon-logo::before {
+    content: "\e93e";
+}
+
+.icon-icon::before {
+    content: "\e920";
+}
+
+/********************************************************************/
+#header > .topbar {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+#header > .topbar > .container > .row > div {
+    height: 40px;
+    font-size: 12px;
+    color: #888;
+}
+
+#header > .topbar > .container > .row > div + div {
+    border-left: 1px solid #c0c0c0;
+}
+
+#header .mobile-link {
+    font-size: 12px;
+    color: #888;
+}
+
+#header .mobile-link img {
+    display: none;
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    top: 28px;
+    z-index: 1001;
+}
+
+#header .mobile-link:hover {
+    text-decoration: none;
+}
+
+#header .mobile-link:hover img {
+    display: block;
+}
+
+#header .icon-icon {
+    font-size: 50px;
+    color: #E92322;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+#header .icon-logo {
+    font-size: 32px;
+    color: #333;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+/*
+* 通栏广告轮播
+*/
+#main_ad {
+
+}
+
+#main_ad > .carousel-inner > .item {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+@media (min-width: 768px) {
+    /*当屏幕宽度大于768时，才会执行*/
+    #main_ad > .carousel-inner > .item {
+        height: 410px;
+    }
+}
+
+#main_ad > .carousel-inner > .item > img {
+    width: 100%;
+}
+
+/*
+*网站特色
+*/
+
+#tese {
+     padding: 5px 0;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.icon-uniE907::before {
+    content: "\e907";
+}
+
+#tese i {
+    font-size: 34px;
+}
+
+#tese > .container > .row > div {
+    margin: 20px 0;
+}
+
+#tese > .container > .row > div a {
+    color: #555;
+    text-decoration: none;
+}
+
+#tese > .container > .row > div a:hover {
+    color: #E92322;
+}
+
+/*
+*立即预约
+*/
+#ljyy {
+    border-bottom: 1px solid #c0c0c0;
+    padding: 20px 0;
+}
+
+#ljyy > .container > p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+#ljyy > .container > p > span {
+    color: #E92322;
+}
+
+#ljyy > .container > p > a:hover {
+    text-decoration: none;
+}
+
+#ljyy > .container > p.pull-left > a {
+    color: #E92322;
+    border-bottom: 1px dotted #E92322;
+}
+
+.icon-uniE906::before {
+    content: "\e906";
+}
+
+.icon-uniE905::before {
+    content: "\e905";
+}
+
+/*
+*  产品推荐
+*/
+#products {
+    background: #f0f0f0;
+    padding: 40px 0;
+}
+
+#products > .container >.ul-wipper > .nav-tabs {
+    padding-left: 20px;
+}
+
+#products > .container >.ul-wipper > .nav-tabs > li > a {
+    color: #666666;
+    font-size: 16px;
+}
+
+#products > .container >.ul-wipper > .nav-tabs > li > a:hover {
+    border-color: transparent;
+    background-color: transparent;
+    color: #000;
+}
+
+#products > .container >.ul-wipper > .nav-tabs > li.active > a {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 4px solid #E92322;
+}
+
+#products > .container >.ul-wipper > .tab-content {
+    padding: 20px 0;
+}
+
+#products > .container > .tab-content p {
+    margin-bottom: 0;
+}
+/*
+*新闻版块
+*/
+#news{
+    padding:50px 0;
+    border-bottom:1px solid #c0c0c0;
+}
+#news .news-title{
+    padding: 15px 0;
+    border-bottom: 1px dashed #c0c0c0;
+    font-weight: 400;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    margin-right: 10px;
+}
+
+#news .news-title::after{
+    content: ' ';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #c0c0c0;
+    border-radius: 50%;
+    position: absolute;
+    right: -10px;
+    bottom: -5px;
+}
+
+
+
+.icon-news01::before {
+    content: "\e90e";
+    font-size: 28px;
+    color: #EAEAEA;
+}
+
+.icon-news02::before {
+    content: "\e90f";
+    font-size: 28px;
+    color: #EAEAEA;
+}
+
+.icon-news03::before {
+    content: "\e910";
+    font-size: 28px;
+    color: #EAEAEA;
+}
+
+.icon-news04::before {
+    content: "\e911";
+    font-size: 28px;
+    color: #EAEAEA;
+}
+
+@media (max-width: 768px) {
+    #news .nav-stacked>li{
+        float:left;
+        margin-right: 20px;
+    }
+}
+/*
+*合作伙伴
+*/
+#hzhb{
+    padding: 30px 0;
+}
+#hzhb ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+    width: 818px;
+}
+#hzhb ul li{
+    float: left;
+}
+#hzhb ul li+li{
+    border-left: 1px dashed #e0e0e0;
+}
+#hzhb ul li a{
+    padding: 10px 20px;
+    font-size: 50px;
+    color: #888;
+}
+
+
+#hzhb ul li a:hover{
+    text-decoration: none;
+    color: #E92322;
+}
+
+
+
+
+.icon-uniE930:hover {
+    color: #df3232;
+}
+
+.icon-uniE930:before {
+    content: "\e946";
+}
+
+.icon-uniE92F:hover {
+    color: #e8380d;
+}
+
+.icon-uniE92F:before {
+    content: "\e92f";
+}
+
+.icon-uniE92E:hover {
+    color: #ed6f00;
+}
+
+.icon-uniE92E:before {
+    content: "\e92e";
+}
+
+.icon-uniE92A:hover {
+    color: #159f69;
+}
+
+.icon-uniE92A:before {
+    content: "\e92a";
+}
+
+.icon-uniE929:hover {
+    color: #07569e;
+}
+
+.icon-uniE929:before {
+    content: "\e929";
+}
+
+.icon-uniE931:hover {
+    color: #004098;
+}
+
+.icon-uniE931:before {
+    content: "\e931";
+}
+
+.icon-uniE92C:hover {
+    color: #d32019;
+}
+
+.icon-uniE92C:before {
+    content: "\e92c";
+}
+
+.icon-uniE92B:hover {
+    color: #3eac4a;
+}
+
+.icon-uniE92B:before {
+    content: "\e92b";
+}
+
+.icon-uniE92D:hover {
+    color: #2bb289;
+}
+
+.icon-uniE92D:before {
+    content: "\e92d";
+}
+
+
+
+
+
+
+
+
+
+
+#footer{
+    padding: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+*Bootstrap扩展
+*/
+.btn-mybtn {
+    color: #ffffff;
+    background-color: #E92322;
+    border-color: #DB3B43;
+}
+
+.btn-mybtn:hover,
+.btn-mybtn:focus,
+.btn-mybtn:active,
+.btn-mybtn.active,
+.open .dropdown-toggle.btn-mybtn {
+    color: #ffffff;
+    background-color: #e92322;
+    border-color: #DB3B43;
+}
+
+.btn-mybtn:active,
+.btn-mybtn.active,
+.open .dropdown-toggle.btn-mybtn {
+    background-image: none;
+}
+
+.btn-mybtn.disabled,
+.btn-mybtn[disabled],
+fieldset[disabled] .btn-mybtn,
+.btn-mybtn.disabled:hover,
+.btn-mybtn[disabled]:hover,
+fieldset[disabled] .btn-mybtn:hover,
+.btn-mybtn.disabled:focus,
+.btn-mybtn[disabled]:focus,
+fieldset[disabled] .btn-mybtn:focus,
+.btn-mybtn.disabled:active,
+.btn-mybtn[disabled]:active,
+fieldset[disabled] .btn-mybtn:active,
+.btn-mybtn.disabled.active,
+.btn-mybtn[disabled].active,
+fieldset[disabled] .btn-mybtn.active {
+    background-color: #E92322;
+    border-color: #DB3B43;
+}
+
+.btn-mybtn .badge {
+    color: #E92322;
+    background-color: #ffffff;
+}
+
+/************************************/
+.navbar-mynav {
+    background-color: #fff;
+    border-color: #f5f5f5;
+    margin-bottom: 0;
+    top: 0;
+    width: 100%;
+}
+
+.navbar-mynav .navbar-brand {
+    color: #777;
+    height: 80px;
+}
+
+.navbar-mynav .navbar-brand:hover,
+.navbar-mynav .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+
+.navbar-mynav .navbar-text {
+    color: #777;
+}
+
+.navbar-mynav .navbar-nav > li > a {
+    color: #777;
+    line-height: 48px;
+}
+
+.navbar-mynav .navbar-nav > li > a:hover,
+.navbar-mynav .navbar-nav > li > a:focus {
+    color: #333;
+    background-color: transparent;
+    border-bottom: 2px solid #E92322;
+}
+
+.navbar-mynav .navbar-nav > .active > a,
+.navbar-mynav .navbar-nav > .active > a:hover,
+.navbar-mynav .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: transparent;
+    border-bottom: 2px solid #E92322;
+}
+
+.navbar-mynav .navbar-nav > .disabled > a,
+.navbar-mynav .navbar-nav > .disabled > a:hover,
+.navbar-mynav .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+
+.navbar-mynav .navbar-toggle {
+    border-color: #ddd;
+    margin-top: 23px;
+    margin-bottom: 23px;
+}
+
+.navbar-mynav .navbar-toggle:hover,
+.navbar-mynav .navbar-toggle:focus {
+    background-color: #ddd;
+}
+
+.navbar-mynav .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+
+.navbar-mynav .navbar-collapse,
+.navbar-mynav .navbar-form {
+    border-color: #e7e7e7;
+}
+
+.navbar-mynav .navbar-nav > .open > a,
+.navbar-mynav .navbar-nav > .open > a:hover,
+.navbar-mynav .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+
+@media (max-width: 767px) {
+    .navbar-mynav .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+
+    .navbar-mynav .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-mynav .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+
+    .navbar-mynav .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-mynav .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-mynav .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #555;
+        background-color: transparent;
+        border-bottom: 2px solid #e92322;
+    }
+
+    .navbar-mynav .navbar-nav .open .dropdown-menu > .disabled > a,
+    .navbar-mynav .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .navbar-mynav .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+}
+
+.navbar-mynav .navbar-link {
+    color: #777;
+}
+
+.navbar-mynav .navbar-link:hover {
+    color: #333;
+}
+
+.navbar-mynav .btn-link {
+    color: #777;
+}
+
+.navbar-mynav .btn-link:hover,
+.navbar-mynav .btn-link:focus {
+    color: #333;
+}
+
+.navbar-mynav .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-mynav .btn-link:hover,
+.navbar-mynav .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-mynav .btn-link:focus {
+    color: #ccc;
+}
+
+/****************/
+.panel-mystyle {
+    border-color: #ddd;
+    border-radius: 0;
+    border: 0;
+    box-shadow: 1px 1px 5px #ccc inset;
+}
+
+.panel-mystyle.actived {
+    background-color: #E92322;
+    color: #ffffff;
+}
+
+.panel-mystyle.actived::before {
+    content: "\e915";
+    font-family: itcast;
+    font-size: 50px;
+    position: absolute;
+    top: -11px;
+    left: 14px;
+}
+
+.panel-mystyle.disabled {
+    background-color: #e0e0e0;
+}
+
+.panel-mystyle > .panel-heading {
+    float: right;
+    width: 120px;
+    height: 150px;
+    border-left: 1px dashed #c0c0c0;
+    text-align: center;
+    position: relative;
+    padding: 45px 0;
+}
+
+.panel-mystyle > .panel-heading > p > strong {
+    font-size: 30px;
+}
+
+.panel-mystyle > .panel-heading::before,
+.panel-mystyle > .panel-heading::after {
+    content: " ";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    position: absolute;
+}
+
+.panel-mystyle > .panel-heading::before {
+    top: -8px;
+    left: -8px;
+}
+
+.panel-mystyle > .panel-heading::after {
+    bottom: -8px;
+    left: -8px;
+    box-shadow: 0 1px 1px #ccc inset;
+}
+
+.panel-mystyle > .panel-body {
+    margin-right: 120px;
+    height: 150px;
+}
+
+.panel-mystyle > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #ddd;
+}
+
+.panel-mystyle > .panel-heading > .tooltips {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 26px;
+}
+
+.panel-mystyle > .panel-heading .badge {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 3px;
+}
+
+.panel-mystyle > .panel-heading .badge-one {
+    color: #e92322;
+    border-color: #E92322;
+}
+
+.panel-mystyle > .panel-heading .badge-two {
+    color: #399;
+    border-color: #399;
+}
+
+.panel-mystyle > .panel-footer + .panel-collapse > .panel-body {
+    border-bottom-color: #ddd;
+}
+
+
+
+
+
